@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Konstanty Karagiorgis</title>
+    <link>https://karagiorgis.pl/</link>
+    <description>Recent content on Konstanty Karagiorgis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://karagiorgis.pl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About me</title>
+      <link>https://karagiorgis.pl/about/</link>
+      <pubDate>Sun, 05 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://karagiorgis.pl/about/</guid>
+      <description>I&#39;m a Tech leader and DevOps engineer with strong software engineering background. I specialize in configuration management of Kubernetes applications and release engineering. I have successfully led teams consisting of multiple senior engineers coming from both sysadmin and software engineering background.   Education Experience  Piwik PRO (11.2015 - now)  Principal Engineer (10.2021 - now) DevOps Tech Lead (03.2020 - 06.2022) DevOps Engineer (03.2019 - 03.2020) Software Engineer (11.</description>
+    </item>
+    
+    <item>
+      <title>Contact me</title>
+      <link>https://karagiorgis.pl/contact/</link>
+      <pubDate>Sun, 05 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://karagiorgis.pl/contact/</guid>
+      <description>Click to reveal my e-mail (primitive spam bot protection): ***********   // My email as As ASCII arr var theSecret = [ 107, 111, 110, 115, 116, 97, 110, 116, 121, 64, 107 ].concat([97, 114, 97, 103, 105, 111, 114, 103, 105, 115, 46, 112, 108]) function bin2String(array) { var result = &#34;&#34;; for (var i = 0; i </description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://karagiorgis.pl/projects/</link>
+      <pubDate>Sun, 05 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://karagiorgis.pl/projects/</guid>
+      <description>Womhole     Allows exposing a kubernetes kind: Service between different clusters via L7 reverse TCP tunnels over websocket, just by using annotations. Similar to ngrok, teleport or skupper, but implemented specifically for Kubernetes. Mostly a learning project.
+NpViz     NpViz is a simple utility, that allows viewing all allowed connections between kubernetes pods using either active kubectl context or static directory with YAML resources as a source.</description>
+    </item>
+    
+  </channel>
+</rss>
