@@ -1,6 +1,6 @@
 ---
 date: "2022-06-05"
-description: Konstanty Karagiorgis - Contact me
+description: How to get in touch with me?
 title: Contact me
 ---
 

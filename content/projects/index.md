@@ -1,6 +1,6 @@
 ---
 date: "2022-06-05"
-description: Konstanty Karagiorgis - Projects
+description: Some of the personal projects I recently worked on
 title: Projects
 ---
 

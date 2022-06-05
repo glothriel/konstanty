@@ -1,6 +1,6 @@
 ---
 date: "2022-06-05"
-description: Konstanty Karagiorgis - About me
+description: Education, work experience and some of the technologies I recently used
 title: About me
 ---
 
@@ -8,19 +8,19 @@ title: About me
 <div class="avatar" style="float: right; margin: 20px;"><img src="/images/avatar.jpg" alt="avatar"></div> I'm a Tech leader and DevOps engineer with strong software engineering background. I specialize in configuration management of Kubernetes applications and release engineering. I have successfully led teams consisting of multiple senior engineers coming from both sysadmin and software engineering background.
 </div>
 
-
 - [Education](#education)
 - [Experience](#experience)
-  * [Piwik PRO (11.2015 - now)](#piwik-pro--112015---now-)
-    + [Principal Engineer (10.2021 - now)](#principal-engineer--102021---now-)
-    + [DevOps Tech Lead (03.2020 - 06.2022)](#devops-tech-lead--032020---062022-)
-    + [DevOps Engineer (03.2019 - 03.2020)](#devops-engineer--032019---032020-)
-    + [Software Engineer (11.2015 - 03.2019)](#software-engineer--112015---032019-)
-  * [(03.2014 - 11.2015) Lightcode](#-032014---112015--lightcode)
+  * [Piwik PRO (11.2015 - now)](#piwik-pro-112015---now)
+    + [Principal Engineer (10.2021 - now)](#principal-engineer-102021---now)
+    + [DevOps Tech Lead (03.2020 - 06.2022)](#devops-tech-lead-032020---062022)
+    + [DevOps Engineer (03.2019 - 03.2020)](#devops-engineer-032019---032020)
+    + [Software Engineer (11.2015 - 03.2019)](#software-engineer-112015---032019)
+  * [(03.2014 - 11.2015) Lightcode](#032014---112015-lightcode)
     + [Fullstack Software Engineer](#fullstack-software-engineer)
-  * [(06.2012 - 11.2015) Freelancing](#-062012---112015--freelancing)
+  * [(06.2012 - 11.2015) Freelancing](#062012---112015-freelancing)
     + [Web Developer](#web-developer)
 - [Technologies](#technologies)
+
 
 # Education
 
