@@ -5,14 +5,14 @@ title: About me
 ---
 
 <div>
-<div class="avatar" style="float: right; margin: 20px;"><img src="/images/avatar.jpg" alt="avatar"></div> I'm a Tech leader and DevOps engineer with strong software engineering background. I specialize in configuration management of Kubernetes applications and release engineering. I have successfully led teams consisting of multiple senior engineers coming from both sysadmin and software engineering background.
+<div class="avatar" style="float: right; margin: 20px;"><img src="/images/avatar.jpg" alt="avatar"></div> I'm a Tech Leader and DevOps Engineer with strong software engineering background. I specialize in configuration management of Kubernetes applications and release engineering. I have successfully led teams consisting of multiple senior engineers coming from both sysadmin and software engineering background.
 </div>
 
 - [Education](#education)
 - [Experience](#experience)
   * [Piwik PRO (11.2015 - now)](#piwik-pro-112015---now)
     + [Principal Engineer (10.2021 - now)](#principal-engineer-102021---now)
-    + [DevOps Tech Lead (03.2020 - 06.2022)](#devops-tech-lead-032020---062022)
+    + [DevOps Team Lead (03.2020 - 06.2022)](#devops-team-lead-032020---062022)
     + [DevOps Engineer (03.2019 - 03.2020)](#devops-engineer-032019---032020)
     + [Software Engineer (11.2015 - 03.2019)](#software-engineer-112015---032019)
   * [(03.2014 - 11.2015) Lightcode](#032014---112015-lightcode)
@@ -34,9 +34,11 @@ Bachelor Computer Scientist, graduated Wrocław University of Technology in 2014
 
 Coordination and consultation of solutions for all technical teams in the company (around 40 people in total), being the decisive person in technical disputes, being a primary representative of technical staff when communicating with business, shaping most of the technical cross-team efforts in the company, especially the ones involving day-to-day work: release engineering, CI, CD, coding standards, cross-team cooperation, deployment pipeline, FLOSS policy. Participating in meetings, where broad knowledge of the system is required - high profile clients, due diligence processes. Strictly technical responsibilities include coding (around 30% of time, almost exclusively around deployment automation tooling - go, python, javascript and a lot of DevOps tools) and cross-team code review. The role is internally called "Architect".
 
-### DevOps Tech Lead (03.2020 - 06.2022)
+### DevOps Team Lead (03.2020 - 06.2022)
 
-Design and development of deployment and configuration management platform based on Kubernetes, terraform and helm, that runs Piwik PRO Analytics Suite (single infrastructure consists of ~400 pods, including applications and stateful components) on public clouds, private clouds, on-premises instances and development environments (as of Q2 2022 12 different infrastructures). Design of migration system, that allowed migrating the infrastructures from previous platform, based on ansible and Rancher 1.6 (pre-kubernetes). The platform is used by 4 development and 3 DevOps teams to deliver the software every two weeks for more than 3000 clients. Design and development of release and test automation frameworks for whole platform. I was a member of a team that was responsible for obtaining SOC-2 certification, I contributed a lot of ideas and their implementation (automated nightly trivy scans and short slack reports with the results, optional falco deployments and alerts, alerts based on access logs, immutable logs storage, auto-expiration of extended privileges for developers debugging on production), that helped with obtaining the certificate.
+Leading a team of 5 DevOps engineers. Design and development of deployment and configuration management platform based on Kubernetes, terraform and helm, that runs Piwik PRO Analytics Suite (single infrastructure consists of ~400 pods, including applications and stateful components) on public clouds, private clouds, on-premises instances and development environments (as of Q2 2022 12 different infrastructures including 5 multi-tenant Azure public clouds, fully automated by terraform). Design of migration system, that allowed migrating the infrastructures from legacy, pre-kubernetes platform. The new platform is used by 4 development and 3 DevOps teams to deliver the software every two weeks for more than 3000 clients. Design and development of release and test automation frameworks for whole platform. I was a member of a team that was responsible for obtaining SOC-2 certification, I contributed a lot of ideas and their implementation (automated nightly Trivy scans and short slack reports with the results, optional Falco deployments and alerts, Prometheus alerts based on parsed Azure access logs, immutable logs storage, auto-expiration of extended privileges for developers debugging on production), that helped with obtaining the certificate.
+
+The team had no dedicated manager, so I performed also this role. It included handling cross-team dependencies, resolving potential conflicts within the team, negotiating salary changes with team members, planning self-development activities with team members, running all SCRUM meetings.
 
 ### DevOps Engineer (03.2019 - 03.2020)
 
