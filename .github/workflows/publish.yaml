@@ -1,0 +1,36 @@
+on:
+  push:
+    branches: ["master"]
+
+name: Publish the page
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Install rclone
+        shell: bash
+        run: sudo apt install rclone -y
+
+      - name: Configure remote
+        shell: bash
+        run: rclone config create remote sftp
+      - name: Save key to a file
+        shell: bash
+        run: |
+          echo "${{ secrets.SFTP_KEY }}" > /tmp/key
+          sudo chown $(id -un):$(id -gn) /tmp/key
+          chmod 600 /tmp/key
+
+      - name: Copy the files
+        shell: bash
+        run: rclone copy public remote:${{ secrets.REMOTE_PATH }} --sftp-port="${{ secrets.SFTP_PORT }}"  --sftp-host="${{ secrets.SFTP_HOST }}" --sftp-user="${{ secrets.SFTP_USER }}" --sftp-key-file="/tmp/key" --sftp-key-file-pass=$(rclone obscure "${{ secrets.SFTP_KEY_PASS }}") 
