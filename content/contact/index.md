@@ -6,7 +6,7 @@ title: Contact me
 
 
 <a id="secret" href="javascript:void(0)" onclick="showSecret()">
-Click to reveal my e-mail (primitive spam bot protection): ***********
+Click to reveal my e-mail (spam bot protection): ***********
 </a>
 
 <script>
