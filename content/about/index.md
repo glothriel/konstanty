@@ -36,9 +36,9 @@ Coordination and consultation of solutions for all technical teams in the compan
 
 ### DevOps Team Lead (03.2020 - 06.2022)
 
-Leading a team of 5 DevOps engineers. Design and development of deployment and configuration management platform based on Kubernetes, terraform and helm, that runs Piwik PRO Analytics Suite (single infrastructure consists of ~400 pods, including applications and stateful components) on public clouds, private clouds, on-premises instances and development environments (as of Q2 2022 12 different infrastructures including 5 multi-tenant Azure public clouds, fully automated by terraform). Design of migration system, that allowed migrating the infrastructures from legacy, pre-kubernetes platform. The new platform is used by 4 development and 3 DevOps teams to deliver the software every two weeks for more than 3000 clients. Design and development of release and test automation frameworks for whole platform. I was a member of a team that was responsible for obtaining SOC-2 certification, I contributed a lot of ideas and their implementation (automated nightly Trivy scans and short slack reports with the results, optional Falco deployments and alerts, Prometheus alerts based on parsed Azure access logs, immutable logs storage, auto-expiration of extended privileges for developers debugging on production), that helped with obtaining the certificate.
+Leading a team of 5 DevOps engineers. Design and development of deployment and configuration management platform based on Kubernetes, terraform and helm, that runs Piwik PRO Analytics Suite (single infrastructure consists of ~400 pods, including applications and stateful components) on public clouds, private clouds, on-premises instances and development environments (as of Q2 2022 12 different infrastructures including 5 multi-tenant Azure public clouds, fully automated by terraform). Design of migration system, that allowed migrating the infrastructures from legacy, pre-kubernetes platform. The new platform is used by 4 development and 3 DevOps teams to deliver the software every two weeks for more than 3000 clients. Design and development of release and test automation frameworks for whole platform.
 
-The team had no dedicated manager, so I performed also this role. It included handling cross-team dependencies, resolving potential conflicts within the team, negotiating salary changes with team members, planning self-development activities with team members, running all SCRUM meetings.
+The team had no dedicated manager, so I performed also Engineering Manager role. It included handling cross-team dependencies, resolving potential conflicts within the team, negotiating salary changes with team members, planning self-development activities with team members, running all SCRUM meetings.
 
 ### DevOps Engineer (03.2019 - 03.2020)
 
@@ -70,10 +70,10 @@ Some of the technologies I recently worked with:
 | Programming languages             | Go, Python                                             |
 | Frameworks                        | Fasthttp, Django, Nolar/kopf, Pytest                           |
 | Clouds                            | Azure, OVH, OpenStack                                  |
-| IAAC Tools                        | Terraform, FluxCD                                      |
+| IAAC Tools                        | Terraform, FluxCD, Ansible                                      |
 | Kubernetes                        | Helm, Kubernetes operators                             |
 | Security                          | Aqua Trivy, Fairwinds Polaris, Falco                   |
 | Misc                              | Travis, Github Actions, Jenkins, MinIO, HAProxy, Nginx |
 | Monitoring                        | Prometheus, Grafana, Loki, PagerDuty, Alertmanager     |
-| Databases (usage and maintenance) | RabbitMQ, Redis, Clickhouse, MySQL, Consul, Zookeeper  |
+| Databases (usage and cluster maintenance) | RabbitMQ, Redis, Clickhouse, MySQL, Consul, Zookeeper  |
 |              | |

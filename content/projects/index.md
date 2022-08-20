@@ -6,7 +6,7 @@ title: Projects
 
 
 
-## <a href="https://github.com/glothriel/wormhole">Womhole <i class="fa fa-github"></i></a>
+## <a href="https://github.com/glothriel/wormhole">Wormhole <i class="fa fa-github"></i></a>
 
 Allows exposing a kubernetes `kind: Service` between different clusters via L7 reverse TCP tunnels over websocket, just by using annotations. Similar to ngrok, teleport or skupper, but implemented specifically for Kubernetes. Mostly a learning project.
 
