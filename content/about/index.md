@@ -71,7 +71,7 @@ Some of the technologies I recently worked with:
 | Frameworks                        | Fasthttp, Django, Nolar/kopf, Pytest                           |
 | Clouds                            | Azure, OVH, OpenStack                                  |
 | IAAC Tools                        | Terraform, FluxCD, Ansible                                      |
-| Kubernetes                        | Helm, Kubernetes operators                             |
+| Kubernetes                        | Helm, Kubernetes operators, AKS, Linkerd                             |
 | Security                          | Aqua Trivy, Fairwinds Polaris, Falco                   |
 | Misc                              | Travis, Github Actions, Jenkins, MinIO, HAProxy, Nginx |
 | Monitoring                        | Prometheus, Grafana, Loki, PagerDuty, Alertmanager     |
