@@ -54,7 +54,7 @@ Development of backend in Piwik PRO Analytics and Audience Manager modules in Py
 
 Developing solo and small team projects for various software house clients: www portal for local NGO organization in Django CMS , frontend for digital signage system in QT/C++, VR application for real estate agency in AngularJS 1.0 and three.js, medical facility automation in CakePHP, various smaller projects in CakePHP.
 
-## (06.2012 - 11.2015) Freelancing
+## (06.2012 - 03.2014) Freelancing
 
 ### Web Developer
 
