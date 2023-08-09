@@ -5,6 +5,9 @@ title: Projects
 ---
 
 
+## <a href="https://github.com/glothriel/grf">GRF <i class="fa fa-github"></i></a>
+
+Gin REST Framework - DRF-style CRUD REST framework for go, using 1.18 generics instead of code generation. The most serious of my projects so far, this one I believe has a potential to be really useful tool.
 
 ## <a href="https://github.com/glothriel/wormhole">Wormhole <i class="fa fa-github"></i></a>
 
