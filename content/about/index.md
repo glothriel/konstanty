@@ -11,7 +11,7 @@ title: About me
 - [Education](#education)
 - [Experience](#experience)
   * [Piwik PRO (11.2015 - now)](#piwik-pro-112015---now)
-    + [Principal Engineer (10.2021 - now)](#principal-engineer-102021---now)
+    + [Staff Engineer (10.2021 - now)](#staff-engineer-102021---now)
     + [DevOps Team Lead (03.2020 - 06.2022)](#devops-team-lead-032020---062022)
     + [DevOps Engineer (03.2019 - 03.2020)](#devops-engineer-032019---032020)
     + [Software Engineer (11.2015 - 03.2019)](#software-engineer-112015---032019)
@@ -30,9 +30,9 @@ Bachelor Computer Scientist, graduated Wrocław University of Technology in 2014
 
 ## Piwik PRO (11.2015 - now)
 
-### Principal Engineer (10.2021 - now)
+### Staff Engineer (10.2021 - now)
 
-Coordination and consultation of solutions for all technical teams in the company (around 40 people in total), being the decisive person in technical disputes, being a primary representative of technical staff when communicating with business, shaping most of the technical cross-team efforts in the company, especially the ones involving day-to-day work: release engineering, CI, CD, coding standards, cross-team cooperation, deployment pipeline, FLOSS policy. Participating in meetings, where broad knowledge of the system is required - high profile clients, due diligence processes. Strictly technical responsibilities include coding (around 30% of time, almost exclusively around deployment automation tooling - go, python, javascript and a lot of DevOps tools) and cross-team code review. The role is internally called "Architect".
+Coordination and consultation of solutions for all technical teams in the company (around 60 engineers), being the decisive person in technical disputes, being a primary representative of technical staff when communicating with business, shaping most of the technical cross-team efforts in the company, especially the ones involving day-to-day work: release engineering, CI, CD, coding standards, cross-team cooperation, deployment pipeline, FLOSS policy. Participating in meetings, where broad knowledge of the system is required - high profile clients, due diligence processes. Strictly technical responsibilities include coding (around 20% of time, almost exclusively around deployment automation tooling - go, python, javascript and a lot of DevOps tools) and cross-team code review. The role is internally called "Architect". 
 
 ### DevOps Team Lead (03.2020 - 06.2022)
 
