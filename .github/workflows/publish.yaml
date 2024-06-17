@@ -1,6 +1,7 @@
 on:
   push:
-    branches: ["master"]
+    branches:
+      - **
 
 name: Publish the page
 jobs:
@@ -34,6 +35,10 @@ jobs:
           echo "${{ secrets.SFTP_KEY }}" > /tmp/key
           sudo chown $(id -un):$(id -gn) /tmp/key
           chmod 600 /tmp/key
+
+      
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
 
       - name: Copy the files
         shell: bash
