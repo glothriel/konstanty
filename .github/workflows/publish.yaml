@@ -36,6 +36,11 @@ jobs:
           sudo chown $(id -un):$(id -gn) /tmp/key
           chmod 600 /tmp/key
 
-      - name: Copy the files
+      - name: Write rclone command to temp file
         shell: bash
-        run: rclone -vv copy public remote:${{ secrets.REMOTE_PATH }} --sftp-port="${{ secrets.SFTP_PORT }}"  --sftp-host="${{ secrets.SFTP_HOST }}" --sftp-user="${{ secrets.SFTP_USER }}" --sftp-key-file="/tmp/key" --sftp-key-file-pass=$(rclone obscure "${{ secrets.SFTP_KEY_PASS }}") 
+        run: |
+          echo 'rclone -vv copy public remote:${{ secrets.REMOTE_PATH }} --sftp-port="${{ secrets.SFTP_PORT }}" --sftp-host="${{ secrets.SFTP_HOST }}" --sftp-user="${{ secrets.SFTP_USER }}" --sftp-key-file="/tmp/key" --sftp-key-file-pass=$(rclone obscure "${{ secrets.SFTP_KEY_PASS }}")' > /tmp/rclone_command.sh
+          chmod +x /tmp/rclone_command.sh
+
+      - name: Start tmate session
+        uses: mxschmitt/action-tmate@v3
