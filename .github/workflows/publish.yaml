@@ -1,6 +1,7 @@
 on:
   push:
-    branches: ["master"]
+    branches:
+      - "**"
 
 name: Publish the page
 jobs:
@@ -27,14 +28,12 @@ jobs:
 
       - name: Configure remote
         shell: bash
-        run: rclone config create remote sftp
-      - name: Save key to a file
-        shell: bash
         run: |
-          echo "${{ secrets.SFTP_KEY }}" > /tmp/key
-          sudo chown $(id -un):$(id -gn) /tmp/key
-          chmod 600 /tmp/key
+          rclone config create remote s3 \
+            provider=B2 \
+            account=${{ secrets.ACCOUNT_ID }} \
+            key=${{ secrets.APPLICATION_KEY }}
 
       - name: Copy the files
         shell: bash
-        run: rclone copy public remote:${{ secrets.REMOTE_PATH }} --sftp-port="${{ secrets.SFTP_PORT }}"  --sftp-host="${{ secrets.SFTP_HOST }}" --sftp-user="${{ secrets.SFTP_USER }}" --sftp-key-file="/tmp/key" --sftp-key-file-pass=$(rclone obscure "${{ secrets.SFTP_KEY_PASS }}") 
+        run: rclone copy public remote:${{ secrets.BUCKET_NAME }} --progress
