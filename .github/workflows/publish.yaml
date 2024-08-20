@@ -30,10 +30,11 @@ jobs:
         shell: bash
         run: |
           rclone config create remote s3 \
-            provider=B2 \
-            account=${{ secrets.ACCOUNT_ID }} \
-            key=${{ secrets.APPLICATION_KEY }}
+            provider=Other \
+            endpoint=${{ secrets.B2_ENDPOINT }} \
+            access_key_id=${{ secrets.B2_ACCESS_KEY_ID }} \
+              secret_access_key=${{ secrets.B2_SECRET_ACCESS_KEY }}
 
       - name: Copy the files
         shell: bash
-        run: rclone copy public remote:${{ secrets.BUCKET_NAME }} --progress
+        run: rclone copy public remote:${{ secrets.B2_BUCKET_NAME }}
