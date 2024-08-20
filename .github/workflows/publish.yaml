@@ -33,7 +33,7 @@ jobs:
             provider=Other \
             endpoint=${{ secrets.B2_ENDPOINT }} \
             access_key_id=${{ secrets.B2_ACCESS_KEY_ID }} \
-              secret_access_key=${{ secrets.B2_SECRET_ACCESS_KEY }}
+            secret_access_key=${{ secrets.B2_SECRET_ACCESS_KEY }}
 
       - name: Copy the files
         shell: bash
