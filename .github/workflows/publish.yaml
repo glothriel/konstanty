@@ -33,7 +33,6 @@ jobs:
           echo "type = b2" >> ~/.config/rclone/rclone.conf
           echo "account = ${{ secrets.B2_ACCESS_KEY_ID }}" >> ~/.config/rclone/rclone.conf
           echo "key = ${{ secrets.B2_SECRET_ACCESS_KEY }}" >> ~/.config/rclone/rclone.conf
-          echo "endpoint = ${{ secrets.B2_ENDPOINT }}" >> ~/.config/rclone/rclone.conf
           echo "hard_delete = true" >> ~/.config/rclone/rclone.conf
         env:
           B2_ACCESS_KEY_ID: ${{ secrets.B2_ACCESS_KEY_ID }}
