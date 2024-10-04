@@ -1,9 +1,9 @@
 on:
   push:
-    tags:
+    branches:
       - "**"
 
-name: Publish the page
+name: Build
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,12 +21,3 @@ jobs:
 
       - name: Build
         run: hugo --minify
-
-      - name: Prepare a .tar.gz file
-        run: tar -czf public.tar.gz public
-
-      - name: Attach the .tar.gz file to the release
-        uses: softprops/action-gh-release@1e07f4398721186383de40550babbdf2b84acfc5
-        if: startsWith(github.ref, 'refs/tags/')
-        with:
-          files: public.tar.gz
