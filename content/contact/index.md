@@ -25,7 +25,7 @@ function showSecret(){
 </script>
 
 
-<p><b>Telephone/Whatsapp/Messenger:</b> <a id="phone" href="javascript:void(0)">Enter my wife's first name in the box below and click reveal (more sophisticated spam bot protection, primary for friends & family)</a></p>
+<p><b>Telephone/Whatsapp/Messenger:</b> <span id="phone" href="javascript:void(0)">Enter my wife's first name in the box below and click reveal (more sophisticated spam bot protection, primary for friends & family)</span></p>
 
 <div id="form">
   <input type="password" id="password" placeholder="My wife's name">
