@@ -5,7 +5,7 @@ title: About me
 ---
 
 <div>
-<div class="avatar" style="float: right; margin: 20px;"><img src="/images/avatar.jpg" alt="avatar"></div> I'm a DevOps Engineer with strong Software Engineering background. I specialize in configuration management of Kubernetes applications and release engineering. I have successfully led teams consisting of multiple senior engineers coming from both sysadmin and software engineering background.
+<div class="avatar" style="float: right; margin: 20px;"><img src="/images/avatar.jpg" alt="avatar"></div> I'm a Tech leader with strong background in both Software and DevOps engineering. I specialize in cloud platform architecture and release engineering, particularly focusing on Kubernetes-based deployments. I have experience leading engineering teams and coordinating technical initiatives across development and operations. My work spans from hands-on development to designing deployment solutions that serve multiple cloud environments.
 </div>
 
 - [Education](#education)
@@ -32,17 +32,17 @@ Bachelor Computer Scientist, graduated Wrocław University of Technology in 2014
 
 ### Staff Engineer (10.2021 - now)
 
-Coordination and consultation of solutions for all technical teams in the company (around 60 engineers), being the decisive person in technical disputes, being a primary representative of technical staff when communicating with business, shaping most of the technical cross-team efforts in the company, especially the ones involving day-to-day work: release engineering, documentation, CI, coding standards, cross-team cooperation, deployment pipeline, FLOSS policy. Participating in meetings, where broad knowledge of the system is required - high profile clients, due diligence processes. Strictly technical responsibilities include coding (around 20% of time, almost exclusively around deployment automation tooling - go, python, javascript and a lot of DevOps tools) and cross-team code review.
+As the principal technical position reporting directly to CTO, responsible for coordinating and consulting on solutions across all technical teams (around 60 engineers). Serve as technical arbiter in architectural decisions and represent engineering staff in business discussions. Drive company-wide technical initiatives focusing on: release engineering, documentation, CI, coding standards, cross-team cooperation, deployment pipeline, and FLOSS policy. Participate in strategic meetings requiring broad system knowledge, including high-profile client engagements and due diligence processes. Technical work comprises approximately 20% of time, primarily focused on deployment automation tooling (Go, Python, JavaScript, DevOps tools) and cross-team code review.
 
 ### DevOps Team Lead (03.2020 - 06.2022)
 
-Leading a team of 5 DevOps engineers. Design and development of deployment and configuration management platform based on Kubernetes, terraform and helm, that runs Piwik PRO Analytics Suite (single infrastructure consists of ~400 pods, including applications and stateful components) on public clouds, private clouds, on-premises instances and development environments (as of Q2 2022 12 different infrastructures including 5 multi-tenant Azure public clouds, fully automated by terraform). Design of migration system, that allowed migrating the infrastructures from legacy, pre-kubernetes platform. The new platform is used by 4 development and 3 DevOps teams to deliver the software every two weeks for more than 3000 clients. Design and development of release and test automation frameworks for whole platform.
+Leading a team of 5 DevOps engineers. Design and development of deployment and configuration management platform based on Kubernetes, terraform and helm, that runs Piwik PRO Analytics Suite (single infrastructure consists of ~400 pods, including applications and stateful components) on public clouds, private clouds, on-premises instances and development environments (as of Q1 2025 ~30 different infrastructures including 5 multi-tenant Azure public clouds, fully automated by terraform). Design of migration system, that allowed migrating the infrastructures from legacy, pre-kubernetes platform. The new platform is used by 4 development and 3 DevOps teams to deliver the software every two weeks for more than 3000 clients. Design and development of release and test automation frameworks for whole platform.
 
 The team had no dedicated manager, so I performed also Engineering Manager role. It included handling cross-team dependencies, resolving potential conflicts within the team, negotiating salary changes with team members, planning self-development activities with team members, running all SCRUM meetings.
 
 ### DevOps Engineer (03.2019 - 03.2020)
 
-Development of upgrade automation software for Piwik PRO Analytics Suite. Led a small team of 3 people, that managed to solve the problem with long and error-prone manual upgrade instructions by replacing them with a simple system using python-based DSL, used to migrate ansible inventory variables and execute ansible playbooks. Participating in on-call rotation for multiple systems.
+Development of upgrade automation for Piwik PRO Analytics Suite, suitable to run on both Cloud and On-premise deployments. Led a small team of 3 people, that managed to solve the problem with long and error-prone manual upgrade documentation by replacing it with a simple system using python-based DSL, used to migrate ansible inventory variables and execute ansible playbooks. Participating in on-call rotation for multiple systems.
 
 ### Software Engineer (11.2015 - 03.2019)
 
@@ -63,17 +63,22 @@ A lot of small projects for individual clients, mostly in PHP, CakePHP and jQuer
 
 # Technologies
 
-Some of the technologies I recently worked with:
+Some of the technologies I recently worked with, the list is not exhaustive:
 
-|              | |
-|-----------------------------------|--------------------------------------------------------|
-| Programming languages             | Go, Python                                             |
-| Frameworks                        | Fasthttp, Django, Nolar/kopf, Pytest                           |
-| Clouds                            | Azure, OVH, OpenStack                                  |
-| IAAC Tools                        | Terraform, FluxCD, Ansible                                      |
-| Kubernetes                        | Helm, Kubernetes operators, AKS, Linkerd                             |
-| Security                          | Aqua Trivy, Fairwinds Polaris, Falco                   |
-| Misc                              | Travis, Github Actions, Jenkins, MinIO, HAProxy, Nginx |
-| Monitoring                        | Prometheus, Grafana, Loki, PagerDuty, Alertmanager     |
-| Databases (usage and cluster maintenance) | RabbitMQ, Redis, Clickhouse, MySQL, Consul, Zookeeper  |
-|              | |
+* Programming languages
+  * Go (advanced)
+  * Python (advanced)
+  * JavaScript (basic)
+* Configuration management
+  * Terraform (advanced)
+  * Helm (advanced)
+* CI/CD
+  * Jenkins (advanced)
+  * GitHub Actions (advanced)
+* Kubernetes (from user perspective, advanced)
+* Monitoring
+  * Grafana (advanced)
+  * Prometheus (intermediate)
+* Databases
+  * Clickhouse (from operator and developer perspective, advanced)
+  * RabbitMQ (from operator and developer perspective, advanced)
