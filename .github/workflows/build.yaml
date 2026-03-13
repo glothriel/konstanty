@@ -1,23 +1,29 @@
+name: Build
+
 on:
   push:
     branches:
       - "**"
-
-name: Build
+    tags-ignore:
+      - "**"
+  pull_request:
 jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
-          submodules: "true"
+          submodules: recursive
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
           extended: true
 
       - name: Build
-        run: hugo --minify
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: hugo --gc --minify

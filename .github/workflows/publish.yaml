@@ -1,32 +1,53 @@
+name: Deploy GitHub Pages
+
 on:
   push:
-    tags:
-      - "**"
+    branches:
+      - master
+  workflow_dispatch:
 
-name: Publish the page
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
-          submodules: "true"
+          submodules: recursive
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
           extended: true
 
       - name: Build
-        run: hugo --minify
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: hugo --gc --minify
 
-      - name: Prepare a .tar.gz file
-        run: tar -czf public.tar.gz public
-
-      - name: Attach the .tar.gz file to the release
-        uses: softprops/action-gh-release@1e07f4398721186383de40550babbdf2b84acfc5
-        if: startsWith(github.ref, 'refs/tags/')
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          files: public.tar.gz
+          path: ./public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
