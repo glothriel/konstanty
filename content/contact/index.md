@@ -8,10 +8,9 @@ title: Contact me
 
 <div class="contact-grid">
 <section class="contact-card" aria-labelledby="email-heading">
-<h2 id="email-heading">Email</h2>
+<h2 id="email-heading">Email & LinkedIn</h2>
 <button class="contact-action" id="email-reveal" type="button" onclick="showSecret()">Reveal email address</button>
 <p class="contact-result" aria-live="polite"><a id="secret"></a></p>
-<h2 id="linkedin-heading">LinkedIn</h2>
 <a class="contact-action" href="https://www.linkedin.com/in/konstanty-karagiorgis-46264a185/">Find me on LinkedIn</a>
 </section>
 
