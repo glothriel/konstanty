@@ -1,0 +1,157 @@
+.content .about-profile {
+  max-width: 82rem;
+  line-height: 1.65;
+}
+
+.content .about-profile header {
+  margin: 3rem 0 2.4rem;
+}
+
+.content .about-profile p {
+  text-align: left;
+  hyphens: none;
+  white-space: normal;
+  margin: 1rem 0;
+}
+
+.about-profile .profile-intro {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.about-profile .profile-intro img {
+  width: 11rem;
+  height: 11rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.about-profile .section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2.4rem;
+  margin: 2.4rem 0 3.2rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid;
+  border-color: color-mix(in srgb, currentColor 20%, transparent);
+  font-size: 1.6rem;
+}
+
+.about-profile h2 {
+  margin: 4rem 0 2rem;
+  padding-top: 1rem;
+}
+
+.about-profile h3 {
+  margin: 2.4rem 0 0.4rem;
+  font-size: 2.2rem;
+}
+
+.about-profile h4 {
+  margin: 0 0 0.4rem;
+  font-size: 2rem;
+}
+
+.about-profile :is(h2, h3, h4) {
+  scroll-margin-top: 2rem;
+}
+
+.content .about-profile .role-meta {
+  margin: 0 0 1.2rem;
+  font-size: 1.5rem;
+  color: color-mix(in srgb, currentColor 75%, transparent);
+}
+
+.about-profile .timeline {
+  margin: 2rem 0 3rem;
+  border-left: 1px solid;
+  border-color: color-mix(in srgb, currentColor 25%, transparent);
+  padding-left: 2.4rem;
+}
+
+.about-profile .role {
+  position: relative;
+  margin-bottom: 3.2rem;
+}
+
+.about-profile .role:last-child {
+  margin-bottom: 0;
+}
+
+.about-profile .role::before {
+  content: "";
+  position: absolute;
+  top: 0.9rem;
+  left: -2.85rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.about-profile .role ul {
+  padding-left: 2rem;
+  margin: 1.2rem 0 0;
+}
+
+.about-profile .role li {
+  padding-left: 0.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.about-profile .technology-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 3rem;
+}
+
+.about-profile .technology-group {
+  border-top: 1px solid;
+  border-color: color-mix(in srgb, currentColor 20%, transparent);
+  padding-top: 1.2rem;
+}
+
+.about-profile .technology-group h4 {
+  font-size: 1.7rem;
+}
+
+.content .about-profile .technology-group p {
+  font-size: 1.6rem;
+  margin: 0.6rem 0 0;
+}
+
+.about-profile .education {
+  margin-top: 4rem;
+  border-top: 1px solid;
+  border-color: color-mix(in srgb, currentColor 20%, transparent);
+}
+
+@media (max-width: 600px) {
+  .content .about-profile header {
+    margin-top: 1.6rem;
+  }
+
+  .about-profile .profile-intro,
+  .about-profile .technology-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-profile .profile-intro {
+    gap: 1rem;
+  }
+
+  .about-profile .profile-intro img {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .about-profile .timeline {
+    padding-left: 1.8rem;
+  }
+
+  .about-profile .role::before {
+    left: -2.25rem;
+  }
+}

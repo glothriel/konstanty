@@ -4,78 +4,158 @@ description: Education, work experience and some of the technologies I recently 
 title: About me
 ---
 
+<div class="profile-intro">
+<img src="/images/avatar.jpg" alt="Konstanty Karagiorgis" width="110" height="110">
 <div>
-<div class="avatar" style="float: right; margin: 20px;"><img src="/images/avatar.jpg" alt="avatar"></div> I'm a Staff Engineer with a software engineering, DevOps and leadership background. I specialize in infrastructure configuration management and CI, with additional exposure to distributed systems, data / analytics engineering and AI harness engineering.
+
+I'm a **Staff Engineer** with a software engineering, DevOps and leadership background. I specialize in **infrastructure configuration management and CI**, with additional exposure to distributed systems, data / analytics engineering and AI harness engineering.
+
+</div>
 </div>
 
-- [Education](#education)
-- [Experience](#experience)
-  * [Piwik PRO (11.2015 - now)](#piwik-pro-112015---now-as-external-contractor)
-    + [Staff Engineer (10.2021 - now)](#staff-engineer-102021---now)
-    + [DevOps Team Lead (03.2020 - 06.2022)](#devops-team-lead-032020---062022)
-    + [DevOps Engineer (03.2019 - 03.2020)](#devops-engineer-032019---032020)
-    + [Software Engineer (11.2015 - 03.2019)](#software-engineer-112015---032019)
-  * [(03.2014 - 11.2015) Lightcode](#032014---112015-lightcode)
-    + [Fullstack Software Engineer](#fullstack-software-engineer)
-  * [(06.2012 - 03.2014) Freelancing](#062012---032014-freelancing)
-    + [Web Developer](#web-developer)
-- [Technologies](#technologies)
+<nav class="section-nav" aria-label="About page sections">
+<a href="#experience">Experience</a>
+<a href="#technologies">Technologies</a>
+<a href="#education">Education</a>
+</nav>
 
+## Experience
 
-# Education
+### Piwik PRO
 
-Bachelor's degree in Computer Science, Wrocław University of Technology, 2014.
+<p class="role-meta">Nov 2015 – present · External contractor</p>
+<div class="timeline">
+<div class="role">
 
-# Experience
+#### Staff Engineer
 
-## Piwik PRO (11.2015 - now, as external contractor)
+<p class="role-meta">Oct 2021 – present</p>
 
-### Staff Engineer (10.2021 - now)
+In the principal technical role, reporting to the CTO, I advise all technical teams (**~60 engineers**), resolve technical disputes and represent engineering in business discussions.
 
-In the principal technical role, reporting to the CTO, I advise all technical teams (~60 engineers), resolve technical disputes and represent engineering in business discussions. I shape cross-team efforts in release engineering, documentation, CI/CD, coding standards, cooperation, deployment pipelines and FLOSS policy, and participate in high-profile client meetings and due diligence.
+- **Cross-team initiatives:** release engineering, documentation, CI/CD, coding standards, cooperation, deployment pipelines and FLOSS policy.
+- **Business engagement:** high-profile client meetings and due diligence.
+- **Data warehouse:** built an end-to-end pipeline with GitHub Actions, dlt, dbt and BigQuery, then hired a Data Analytics Engineer and handed over responsibility.
 
-I also built an end-to-end data warehouse pipeline with GitHub Actions, dlt, dbt and BigQuery, then hired a Data Analytics Engineer and handed over responsibility.
+</div>
+<div class="role">
 
-### DevOps Team Lead (03.2020 - 06.2022)
+#### DevOps Team Lead
 
-Led 5 DevOps engineers and designed and built a Kubernetes, Terraform and Helm platform-agnostic deployment and configuration platform for Piwik PRO Analytics Suite (400+ workloads), including legacy-platform migration, release and test automation. It supports public/private clouds, on-premises and development environments: 21 infrastructures as of Q2 2026, including 5 multi-tenant Azure public clouds, fully automated with Terraform. Four development and three DevOps teams use it to release every two weeks to 3,000+ clients.
+<p class="role-meta">Mar 2020 – Jun 2022</p>
 
-Also acted as Engineering Manager, handling cross-team dependencies, team conflicts, salary negotiations, development plans and all Scrum meetings.
+Led **5 DevOps engineers** and acted as Engineering Manager.
 
-### DevOps Engineer (03.2019 - 03.2020)
+- **Platform:** designed and built a platform-agnostic deployment and configuration platform for Piwik PRO Analytics Suite using Kubernetes, Terraform and Helm, including legacy-platform migration, release and test automation.
+- **Scale:** **400+ workloads** across public/private clouds, on-premises and development environments. As of Q2 2026: **21 infrastructures**, including 5 multi-tenant Azure public clouds, fully automated with Terraform.
+- **Delivery:** 4 development and 3 DevOps teams releasing every two weeks to **3,000+ clients**.
+- **People management:** cross-team dependencies, team conflicts, salary negotiations, development plans and all Scrum meetings.
 
-Led a 3-person team building cloud and on-premises upgrade automation for Piwik PRO Analytics Suite. Replaced lengthy, error-prone manual instructions with a Python DSL for migrating Ansible inventory variables and running playbooks. Participated in multi-system on-call rotations.
+</div>
+<div class="role">
 
-### Software Engineer (11.2015 - 03.2019)
+#### DevOps Engineer
 
-Built Piwik PRO Analytics and Audience Manager backends in Python, Django and Tornado, including work for sister company Clearcode.
+<p class="role-meta">Mar 2019 – Mar 2020</p>
 
-## (03.2014 - 11.2015) Lightcode
+Led a **3-person team** building cloud and on-premises upgrade automation for Piwik PRO Analytics Suite.
 
-### Fullstack Software Engineer
+- Replaced lengthy, error-prone manual instructions with a **Python DSL** for migrating Ansible inventory variables and running playbooks.
+- Participated in multi-system on-call rotations.
 
-Delivered solo and small-team client projects: an NGO portal (Django CMS), digital signage frontend (Qt/C++), real estate VR app (AngularJS 1.0, three.js), medical facility automation and smaller applications (CakePHP).
+</div>
+<div class="role">
 
-## (06.2012 - 03.2014) Freelancing
+#### Software Engineer
 
-### Web Developer
+<p class="role-meta">Nov 2015 – Mar 2019</p>
 
-Built small client projects in PHP, CakePHP and jQuery, including hotel reservations and financial comparison sites; contributed to the browser-based dog-breeding game engine doggi-game.pl.
+Built Piwik PRO Analytics and Audience Manager backends in **Python, Django and Tornado**, including work for sister company Clearcode.
 
+</div>
+</div>
 
-# Technologies
+### Lightcode
 
-## Commercial experience
+<p class="role-meta">Mar 2014 – Nov 2015</p>
+<div class="timeline">
+<div class="role">
 
-* Go, Python
-* BigQuery, Clickhouse, PostgreSQL, MySQL, Redis, RabbitMQ, Prometheus
-* Terraform, Pulumi, Kubernetes, Helm
-* Grafana, Google Data Studio
-* GitHub Actions, Jenkins
-* dbt Core, dlt
-* Unit, integration and e2e test automation
+#### Fullstack Software Engineer
 
-## Vibe-coding projects exposure
+Delivered solo and small-team client projects:
 
-* C++ / PlatformIO
-* Frontend / TypeScript
+- NGO portal (Django CMS) and digital signage frontend (Qt/C++).
+- Real estate VR app (AngularJS 1.0, three.js).
+- Medical facility automation and smaller applications (CakePHP).
+
+</div>
+</div>
+
+### Freelancing
+
+<p class="role-meta">Jun 2012 – Mar 2014</p>
+<div class="timeline">
+<div class="role">
+
+#### Web Developer
+
+Built small client projects in **PHP, CakePHP and jQuery**, including hotel reservations and financial comparison sites; contributed to the browser-based dog-breeding game engine doggi-game.pl.
+
+</div>
+</div>
+
+## Technologies
+
+### Strong commercial experience
+
+<div class="technology-grid">
+<div class="technology-group">
+
+#### Languages
+
+Go, Python
+
+</div>
+<div class="technology-group">
+
+#### Infrastructure
+
+Terraform, Pulumi, Kubernetes, Helm, Azure, UpCloud
+
+</div>
+<div class="technology-group">
+
+#### Data & messaging
+
+BigQuery, ClickHouse, PostgreSQL, Redis, RabbitMQ, dbt Core, dlt
+
+</div>
+<div class="technology-group">
+
+#### CI & testing
+
+GitHub Actions, Jenkins; unit, integration and e2e test automation
+
+</div>
+<div class="technology-group">
+
+#### Monitoring & reporting
+
+Prometheus, Grafana, Google Data Studio
+
+</div>
+</div>
+
+### Also worked with
+
+NATS Jetstream, MySQL, Web frontend stuff, ScyllaDB, OpenStack
+
+<div class="education">
+
+## Education
+
+**Bachelor's degree in Computer Science**<br>
+Wrocław University of Technology, 2014.
+
+</div>

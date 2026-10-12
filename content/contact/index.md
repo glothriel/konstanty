@@ -4,7 +4,16 @@ description: How to get in touch with me?
 title: Contact me
 ---
 
-<p><b>Email:</b> <a id="secret" href="javascript:void(0)" onclick="showSecret()">Click to reveal my e-mail (primitive crawler bot protection)</a></p>
+<p class="contact-intro">Email is the easiest way to reach me. My phone number is here for friends and family too.</p>
+
+<div class="contact-grid">
+<section class="contact-card" aria-labelledby="email-heading">
+<h2 id="email-heading">Email</h2>
+<button class="contact-action" id="email-reveal" type="button" onclick="showSecret()">Reveal email address</button>
+<p class="contact-result" aria-live="polite"><a id="secret"></a></p>
+<h2 id="linkedin-heading">LinkedIn</h2>
+<a class="contact-action" href="https://www.linkedin.com/in/konstanty-karagiorgis-46264a185/">Find me on LinkedIn</a>
+</section>
 
 <script>
 // My email as As ASCII arr
@@ -20,17 +29,29 @@ function bin2String(array) {
   return result;
 }
 function showSecret(){
-    document.getElementById("secret").innerHTML = bin2String(theSecret);
+    const email = bin2String(theSecret);
+    const link = document.getElementById("secret");
+    link.textContent = email;
+    link.href = "mailto:" + email;
+    document.getElementById("email-reveal").hidden = true;
 }
 </script>
 
 
-<p><b>Telephone/Whatsapp/Messenger:</b> <span id="phone" href="javascript:void(0)">Enter my wife's first name in the box below and click reveal (more sophisticated spam bot protection, primary for friends & family)</span></p>
-
-<div id="form">
-  <input type="password" id="password" placeholder="My wife's name">
-  <button onclick="showPhone()">Reveal phone number</button>
+<section class="contact-card" aria-labelledby="phone-heading">
+<h2 id="phone-heading">Phone &amp; messaging</h2>
+<p>Telephone, WhatsApp or Signal. A small challenge: enter my wife's first name.</p>
+<form class="contact-form" id="form" onsubmit="event.preventDefault(); showPhone();">
+  <label for="password">My wife's first name</label>
+  <input type="password" id="password" autocomplete="off" required aria-describedby="phone-feedback">
+  <button class="contact-action" id="phone-reveal" type="submit">Reveal phone number</button>
+  <p class="contact-feedback" id="phone-feedback" role="status"></p>
+</form>
+<p class="contact-result" id="phone" aria-live="polite"></p>
+</section>
 </div>
+
+<noscript><p>Please enable JavaScript to reveal my contact details.</p></noscript>
 
 <script>
 const encryptedSecret = {
@@ -80,44 +101,47 @@ const encryptedSecret = {
 };
 
 async function showPhone() {
-    // lowercased
-    const password = document.getElementById("password").value.toLowerCase();
-
-
-    const decoder = new TextDecoder();
-    const keyMaterial = await crypto.subtle.importKey(
-        "raw",
-        new TextEncoder().encode(password),
-        { name: "PBKDF2" },
-        false,
-        ["deriveKey"]
-    );
-    const key = await crypto.subtle.deriveKey(
-        {
-            name: "PBKDF2",
-            salt: new TextEncoder().encode("some_salt"),
-            iterations: 100000,
-            hash: "SHA-256"
-        },
-        keyMaterial,
-        { name: "AES-GCM", length: 256 },
-        false,
-        ["decrypt"]
-    );
-    const iv = new Uint8Array(encryptedSecret.iv);
-    const encryptedData = new Uint8Array(encryptedSecret.secret);
+    const button = document.getElementById("phone-reveal");
+    const feedback = document.getElementById("phone-feedback");
+    button.disabled = true;
+    feedback.textContent = "Checking…";
     try {
+        const password = document.getElementById("password").value.toLowerCase();
+        const decoder = new TextDecoder();
+        const keyMaterial = await crypto.subtle.importKey(
+            "raw",
+            new TextEncoder().encode(password),
+            { name: "PBKDF2" },
+            false,
+            ["deriveKey"]
+        );
+        const key = await crypto.subtle.deriveKey(
+            {
+                name: "PBKDF2",
+                salt: new TextEncoder().encode("some_salt"),
+                iterations: 100000,
+                hash: "SHA-256"
+            },
+            keyMaterial,
+            { name: "AES-GCM", length: 256 },
+            false,
+            ["decrypt"]
+        );
+        const iv = new Uint8Array(encryptedSecret.iv);
+        const encryptedData = new Uint8Array(encryptedSecret.secret);
         const decrypted = await crypto.subtle.decrypt(
             { name: "AES-GCM", iv: iv },
             key,
             encryptedData
         );
         const secret = decoder.decode(decrypted);
-        document.getElementById("phone").innerHTML = secret;
+        document.getElementById("phone").textContent = secret;
         // hide the form
         document.getElementById("form").style.display = "none";
     } catch (e) {
-        alert("Decryption failed");
+        feedback.textContent = "Couldn't unlock the number. Check the name and try again.";
+    } finally {
+        button.disabled = false;
     }
 }
 

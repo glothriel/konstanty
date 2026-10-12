@@ -1,0 +1,141 @@
+.content .contact-page {
+  max-width: 82rem;
+  line-height: 1.65;
+}
+
+.content .contact-page header {
+  margin: 3rem 0 2.4rem;
+}
+
+.content .contact-page p {
+  text-align: left;
+  hyphens: none;
+  white-space: normal;
+  margin: 0 0 1.2rem;
+}
+
+.content .contact-page .contact-intro {
+  max-width: 58rem;
+  margin-bottom: 3.2rem;
+}
+
+.contact-page .contact-card {
+  display: grid;
+  grid-template-columns: 18rem minmax(0, 1fr);
+  column-gap: 3rem;
+  row-gap: 1.2rem;
+  align-items: start;
+  padding: 2.8rem 0;
+  border-top: 1px solid;
+  border-color: color-mix(in srgb, currentColor 20%, transparent);
+}
+
+.contact-page .contact-card > * {
+  grid-column: 2;
+}
+
+.contact-page .contact-card h2 {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 2rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.contact-page .contact-card > p {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.contact-page .contact-action {
+  justify-self: start;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  cursor: pointer;
+}
+
+.contact-page .contact-action:hover {
+  border-bottom-color: transparent;
+}
+
+.contact-page :is(button, input, a):focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.contact-page .contact-action:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.contact-page [hidden] {
+  display: none;
+}
+
+.contact-page .contact-form {
+  margin-top: 0.8rem;
+}
+
+.contact-page .contact-form label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-size: 1.4rem;
+}
+
+.contact-page .contact-form input {
+  display: block;
+  width: 100%;
+  max-width: 30rem;
+  min-width: 0;
+  margin-bottom: 1.2rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid;
+  border-color: color-mix(in srgb, currentColor 35%, transparent);
+  border-radius: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  font-size: 1.6rem;
+}
+
+.contact-page .contact-result {
+  overflow-wrap: anywhere;
+}
+
+.content .contact-page .contact-feedback {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+}
+
+.contact-page .contact-feedback:empty,
+.contact-page .contact-result:empty {
+  display: none;
+}
+
+.contact-page .contact-result:has(a:empty) {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .contact-page .contact-card {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    padding: 2.4rem 0;
+  }
+
+  .contact-page .contact-card > *,
+  .contact-page .contact-card h2 {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .content .contact-page header {
+    margin-top: 1.6rem;
+  }
+}
