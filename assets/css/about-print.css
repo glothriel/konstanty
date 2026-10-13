@@ -1,0 +1,184 @@
+/* A named page keeps the CV paper settings local to the About page. */
+@page cv {
+  size: A4;
+  margin: 14mm 16mm;
+}
+
+@media print {
+  body:has(.about-profile) {
+    page: cv;
+    color-scheme: light;
+    background: #fff !important;
+    color: #222 !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  body:has(.about-profile) :is(.navigation, .footer, .float-container),
+  .about-profile :is(.screen-title, .section-nav, .heading-link, .cv-download) {
+    display: none !important;
+  }
+
+  body:has(.about-profile) :is(.wrapper, .content) {
+    display: block;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .content .about-profile {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+  }
+
+  .content .about-profile header {
+    margin: 0 0 5mm;
+    padding-bottom: 3mm;
+    border-bottom: 1pt solid #555;
+  }
+
+  .about-profile .cv-heading {
+    display: block;
+  }
+
+  .content .about-profile h1 {
+    margin: 0;
+    font-size: 24pt;
+    line-height: 1.15;
+  }
+
+  .content .about-profile .cv-title {
+    margin: 2mm 0 1mm;
+    font-size: 12pt;
+  }
+
+  .content .about-profile .cv-links {
+    margin: 0;
+    font-size: 9pt;
+  }
+
+  .about-profile :is(h1, h2, h3, h4, a) {
+    color: #222 !important;
+    font-family: inherit;
+  }
+
+  .about-profile a {
+    text-decoration: none;
+  }
+
+  .about-profile a::after {
+    content: none !important;
+  }
+
+  .about-profile .profile-intro {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 20mm minmax(0, 1fr);
+    gap: 4mm;
+    break-inside: avoid;
+  }
+
+  .about-profile .profile-intro img {
+    width: 20mm;
+    height: 20mm;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .content .about-profile p {
+    margin: 2mm 0;
+    text-align: left;
+    hyphens: none;
+    white-space: normal;
+    orphans: 3;
+    widows: 3;
+  }
+
+  .about-profile :is(h2, h3, h4) {
+    padding: 0;
+    line-height: 1.25;
+    break-after: avoid;
+  }
+
+  .about-profile h2 {
+    margin: 5mm 0 2.5mm;
+    padding-bottom: 1.5mm;
+    border-bottom: 0.5pt solid #bbb;
+    font-size: 14pt;
+  }
+
+  .about-profile h3 {
+    margin: 3.5mm 0 1mm;
+    font-size: 12pt;
+  }
+
+  .about-profile h4 {
+    margin: 0 0 1mm;
+    font-size: 10.5pt;
+  }
+
+  .content .about-profile .role-meta {
+    margin: 0 0 2mm;
+    font-size: 9pt;
+    color: #555;
+    break-after: avoid;
+  }
+
+  .about-profile .timeline {
+    margin: 2mm 0 4mm;
+    padding-left: 0;
+    border: 0;
+  }
+
+  .about-profile .role {
+    margin-bottom: 3.5mm;
+    break-inside: avoid;
+  }
+
+  .about-profile .role::before {
+    display: none;
+  }
+
+  .about-profile .role ul {
+    margin: 2mm 0 0;
+    padding-left: 4.5mm;
+  }
+
+  .about-profile .role li {
+    margin-bottom: 1mm;
+    padding-left: 0;
+    orphans: 2;
+    widows: 2;
+  }
+
+  .about-profile .technology-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3mm 6mm;
+  }
+
+  .about-profile .technology-group {
+    padding-top: 2mm;
+    border-color: #bbb;
+    break-inside: avoid;
+  }
+
+  .about-profile .technology-group h4 {
+    font-size: 10pt;
+  }
+
+  .content .about-profile .technology-group p {
+    margin: 1mm 0 0;
+    font-size: 10pt;
+  }
+
+  .about-profile .education {
+    margin-top: 4mm;
+    border: 0;
+    break-inside: avoid;
+  }
+}

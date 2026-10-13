@@ -4,7 +4,27 @@
 {{ define "content" }}
   <section class="container page about-profile">
     <article>
-      <header><h1 class="title">{{ .Title }}</h1></header>
+      <header>
+        <h1 class="title screen-title">{{ .Title }}</h1>
+        <div class="cv-heading">
+          <h1>{{ .Site.Params.author }}</h1>
+          <p class="cv-title">{{ delimit .Site.Params.info " · " }}</p>
+          <p class="cv-links">
+            <a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL | replaceRE "^https?://" "" | strings.TrimRight "/" }}</a>
+            {{ range .Site.Params.social }}
+              {{ if eq .name "LinkedIn" }}
+                <span aria-hidden="true"> · </span><a href="{{ .url }}">LinkedIn: konstanty-karagiorgis-46264a185</a>
+              {{ end }}
+            {{ end }}
+          </p>
+        </div>
+        <button class="cv-download" type="button" onclick="window.print()" aria-label="Download as PDF" title="Download as PDF">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M6 9V3h12v6M6 17H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2" />
+            <path d="M6 14h12v7H6zM18 12h.01" />
+          </svg>
+        </button>
+      </header>
       {{ .Content }}
     </article>
   </section>

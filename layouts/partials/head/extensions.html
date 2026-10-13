@@ -1,0 +1,9 @@
+{{ if eq .RelPermalink ("/about/" | relLangURL) }}
+  {{ $styles := resources.Get "css/about-print.css" }}
+  {{ if hugo.IsServer }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="print">
+  {{ else }}
+    {{ $styles = $styles | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="print">
+  {{ end }}
+{{ end }}

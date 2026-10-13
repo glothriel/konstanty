@@ -1,3 +1,57 @@
+.about-profile .cv-heading {
+  display: none;
+}
+
+.about-profile article {
+  position: relative;
+}
+
+.about-profile .screen-title {
+  padding-right: 4rem;
+}
+
+.about-profile .cv-download {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  padding: 0.8rem;
+  border: 0;
+  border-radius: 0.4rem;
+  background: none;
+  color: inherit;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.about-profile article:is(:hover, :focus-within) .cv-download {
+  opacity: 0.65;
+  pointer-events: auto;
+}
+
+.about-profile article .cv-download:is(:hover, :focus-visible) {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .about-profile .cv-download {
+    opacity: 0.65;
+    pointer-events: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-profile .cv-download {
+    transition: none;
+  }
+}
+
 .content .about-profile {
   max-width: 82rem;
   line-height: 1.65;
